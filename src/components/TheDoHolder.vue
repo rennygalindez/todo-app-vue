@@ -1,19 +1,24 @@
 <template>
-  <div id="todoHolder"></div>
+  <div id="todoHolder">
+    <to-do-item />
+  </div>
 </template>
 
 <script>
-export default {};
+import ToDoItem from '@/components/ToDoItem';
+export default {
+  components: { ToDoItem },
+};
 </script>
 
 <style>
 div #todoHolder {
-  min-width: 50%;
+  min-width: 100%;
   border-radius: 1%;
   color: #fff;
   height: auto;
-  padding: 3rem;
-  margin: auto;
+  padding: 0.5rem;
+  
   background: linear-gradient(
     90deg,
     rgba(246, 70, 76, 1) 50%,
