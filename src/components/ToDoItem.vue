@@ -103,4 +103,12 @@ li {
   text-align: center;
   padding-top: 1rem;
 }
+@media (min-width: 640px) {
+  #description {
+    font-size: 1.3rem;
+    /* padding: 1rem 0; */
+    width: 70%;
+    padding: 0.5rem;
+  }
+}
 </style>
