@@ -6,7 +6,6 @@
 </template>
 
 
-
 <script>
 export default {
   computed: {
@@ -34,6 +33,7 @@ p {
 }
 
 #container-header {
-  overflow: auto;
+  overflow: hidden;
+  padding: 2rem;
 }
 </style>
