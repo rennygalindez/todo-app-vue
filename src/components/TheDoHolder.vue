@@ -1,13 +1,15 @@
 <template>
   <div id="todoHolder">
+    <to-do-header />
     <to-do-item />
   </div>
 </template>
 
 <script>
-import ToDoItem from '@/components/ToDoItem';
+import ToDoItem from "@/components/ToDoItem";
+import ToDoHeader from "@/components/ToDoHeader";
 export default {
-  components: { ToDoItem },
+  components: { ToDoItem, ToDoHeader }
 };
 </script>
 
@@ -18,7 +20,7 @@ div #todoHolder {
   color: #fff;
   height: auto;
   padding: 0.5rem;
-  
+
   background: linear-gradient(
     90deg,
     rgba(246, 70, 76, 1) 50%,
