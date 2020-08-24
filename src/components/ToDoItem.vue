@@ -8,7 +8,7 @@
           }}
         </p>
         <font-awesome-icon
-          @click="deleteTodo"
+          @click="deleteTodo(index)"
           :icon="['far','trash-alt']"
           size="2x"
           :class="['icon', 'trash-icon']"

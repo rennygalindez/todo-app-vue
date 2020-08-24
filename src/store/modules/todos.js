@@ -8,6 +8,26 @@ const state = () => ({
       done: false,
     },
     {
+      name: 'Comprar',
+      done: false,
+    },
+    {
+      name: 'Comprar el papel pergamino para la maqueta de Marcel',
+      done: false,
+    },
+    {
+      name: 'Comprar el papel pergamino para la maqueta de Marcel',
+      done: false,
+    },
+    {
+      name: 'Comprar el papel pergamino para la maqueta de Marcel',
+      done: false,
+    },
+    {
+      name: 'Comprar el papel pergamino para la maqueta de Marcel',
+      done: false,
+    },
+    {
       name: 'Comprar el papel pergamino para la maqueta de Marcel',
       done: false,
     },
@@ -18,10 +38,16 @@ const mutations = {
   changeDone(state, todoIndex) {
     state.all[todoIndex].done = !state.all[todoIndex].done; //I think this is ugly, I'll improve it.
   },
+  changeDeleteTodo(state, todoIndex) {
+    state.all.splice(todoIndex, 1);
+  },
 };
 const actions = {
   didIt({ commit }, todoIndex) {
     commit('changeDone', todoIndex);
+  },
+  deleteTodo({ commit }, todoIndex) {
+    commit('changeDeleteTodo', todoIndex);
   },
 };
 const getters = {};
