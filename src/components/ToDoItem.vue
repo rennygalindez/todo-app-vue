@@ -7,7 +7,12 @@
           todo.name.length > 20 ? `${todo.name.slice(0, 20)} ...` : todo.name
           }}
         </p>
-        <font-awesome-icon :icon="['far','trash-alt']" size="2x" :class="['icon', 'trash-icon']" />
+        <font-awesome-icon
+          @click="deleteTodo"
+          :icon="['far','trash-alt']"
+          size="2x"
+          :class="['icon', 'trash-icon']"
+        />
         <font-awesome-icon
           @click="makeDidIt(index)"
           :icon="['far', todo.done ? 'check-square' : 'square']"
@@ -17,6 +22,9 @@
         <transition name="fade-translate">
           <p class="great" v-show="todo.done">Great</p>
         </transition>
+      </li>
+      <li v-if="todos.length <= 0">
+        <p class="nothing__to-do">Congrats, there is Nothing to do.</p>
       </li>
     </ul>
   </div>
@@ -36,6 +44,9 @@ export default {
   methods: {
     makeDidIt(todoIndex) {
       this.$store.dispatch("todos/didIt", todoIndex);
+    },
+    deleteTodo(todoIndex) {
+      this.$store.dispatch("todos/deleteTodo", todoIndex);
     }
   }
 };
@@ -52,7 +63,7 @@ li {
   border-top: 0.1rem rgba(255, 255, 255, 0.2) solid;
   height: 5rem;
   padding: 1rem 0;
-  overflow: auto;
+  overflow: hidden;
 }
 
 #description {
@@ -87,5 +98,9 @@ li {
 .fade-translate-enter-active,
 .fade-translate-leave-active {
   transition: all 0.5s ease;
+}
+.nothing__to-do {
+  text-align: center;
+  padding-top: 1rem;
 }
 </style>
