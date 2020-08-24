@@ -7,30 +7,6 @@ const state = () => ({
       name: 'Llevarle a mi mamá la torta para el cumple de Daniel',
       done: false,
     },
-    {
-      name: 'Comprar',
-      done: false,
-    },
-    {
-      name: 'Comprar el papel pergamino para la maqueta de Marcel',
-      done: false,
-    },
-    {
-      name: 'Comprar el papel pergamino para la maqueta de Marcel',
-      done: false,
-    },
-    {
-      name: 'Comprar el papel pergamino para la maqueta de Marcel',
-      done: false,
-    },
-    {
-      name: 'Comprar el papel pergamino para la maqueta de Marcel',
-      done: false,
-    },
-    {
-      name: 'Comprar el papel pergamino para la maqueta de Marcel',
-      done: false,
-    },
   ],
 });
 
