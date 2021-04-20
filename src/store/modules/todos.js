@@ -2,6 +2,7 @@ const state = () => ({
   all: [
     { name: 'Buscar a Marcel en la casa', done: false },
     { name: 'Llevar a Valentina al volleyball', done: false },
+    { name: 'Bañar a Sally', done: true },
     { name: 'Recordarle a Karyn ir por la ropa', done: false },
     {
       name: 'Llevarle a mi mamá la torta para el cumple de Daniel',
